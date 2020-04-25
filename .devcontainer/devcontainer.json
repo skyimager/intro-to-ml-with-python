@@ -1,0 +1,45 @@
+{
+	"name": "intro-to-ml-with-python",
+	"dockerComposeFile": "docker-compose.yaml",
+	"service": "app",
+	"workspaceFolder": "/workspace",
+	// "context": "..",
+	// "dockerFile": "Dockerfile",
+	// "mounts": ["/Master/data, target=/data, type=bind, consistency=cached"],
+
+	// Use 'settings' to set *default* container specific settings.json values on container create. 
+	// You can edit these settings after create using File > Preferences > Settings > Remote.
+	"settings": { 
+		"terminal.integrated.shell.linux": "/bin/bash",
+		"python.pythonPath": "/opt/conda/bin/python",
+		"python.linting.enabled": true,
+		"python.linting.pylintEnabled": true,
+		"python.linting.pylintPath": "/opt/conda/bin/pylint"
+	},
+
+	// Use 'appPort' to create a container with published ports. If the port isn't working, be sure
+	// your server accepts connections from all interfaces (0.0.0.0 or '*'), not just localhost.
+	"appPort": [8080],
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Prepare dependencies
+	"postCreateCommand": "conda init",
+
+	// Comment out next line to run as root
+	"remoteUser": "vscode",
+
+	// Set environment variables for VS Code and sub-processes
+	"containerEnv": {
+		"PYTHONDONTWRITEBYTECODE": "true"
+	},
+	"remoteEnv": { 
+		"PYTHONDONTWRITEBYTECODE": "true"
+	},
+	
+	// Add the IDs of extensions you want installed when the container is created in the array below.
+	"extensions": [
+		"ms-python.python"
+	]
+}

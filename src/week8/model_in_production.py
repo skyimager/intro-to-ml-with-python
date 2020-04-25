@@ -4,7 +4,7 @@ import pandas as pd
 
 app = Flask(__name__)
 
-@app.route('/',methods=['POST'])
+@app.route('/')
 def home():
     return "Success"
 

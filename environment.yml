@@ -1,0 +1,10 @@
+channels:
+  - conda-forge
+  - anaconda
+  - defaults
+dependencies:
+  - pip
+  - pip:
+    - --index-url=https://pypi.org/simple
+    - --trusted-host=pypi.org
+    - -rrequirements/requirements.in

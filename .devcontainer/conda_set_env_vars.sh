@@ -1,0 +1,3 @@
+#!/bin/sh
+
+# export PIP_EXTRA_INDEX_URL=${PIP_EXTRA_INDEX_URL}
