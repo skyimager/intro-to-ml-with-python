@@ -49,4 +49,4 @@ lint_autofix:
 	@echo "Few linting issues fixed"
 
 jupyter:
-	$(CONDA_ACTIVATE) jupyter notebook --no-browser --allow-root
+	$(CONDA_ACTIVATE) jupyter notebook --port 8888 --no-browser --allow-root

@@ -15,14 +15,13 @@ ENV DEBIAN_FRONTEND=noninteractive
 ARG USERNAME=vscode
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
-ARG CONDA_ENV_NAME='base'
+ARG CONDA_ENV_NAME='edvancer'
 ENV CONDA_ENV_NAME=$CONDA_ENV_NAME
 ENV CONDA_BIN='/opt/conda/bin/conda'
 
 # Copy environment.yml (if found) to a temp locaition so we update the environment. Also
 # copy "noop.txt" so the COPY instruction does not fail if no environment.yml exists.
-COPY environment*.yml requirements .devcontainer/noop.txt /tmp/conda-tmp/
-COPY requirements /tmp/conda-tmp/requirements
+COPY environment*.yml requirements* .devcontainer/noop.txt /tmp/conda-tmp/
 COPY .devcontainer/conda_set_env_vars.sh /opt/conda/activate.d/env_vars.sh
 COPY .devcontainer/conda_unset_env_vars.sh /opt/conda/deactivate.d/env_vars.sh
 
