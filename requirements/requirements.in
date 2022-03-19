@@ -1,7 +1,0 @@
-# requirements.in
-# this file shall contain all development dependencies e.g. dependencies related to test etc..
-# regenerate this file by running 'make deps' and install by running 'make install'
-stringcase
-python-multipart
-pypeln
-pandas

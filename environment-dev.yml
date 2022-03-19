@@ -1,14 +1,13 @@
+name: edvancer
 channels:
   - conda-forge
-  - anaconda
   - defaults
 dependencies:
+  - python=3.7
   - pip
-  - python=3.6.7
   - jupyter
-  - jupyterlab
   - jupyter_contrib_nbextensions
   - pip:
     - --index-url=https://pypi.org/simple
     - --trusted-host=[pypi.org]
-    - -rrequirements/requirements-dev.in
+    - -rrequirements-dev.in

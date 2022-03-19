@@ -1,19 +1,15 @@
 # dev-requirements.in
 # this file shall contain all development dependencies e.g. dependencies related to test etc..
 # regenerate this file by running 'make deps' and install by running 'make install-dev'
-
 pylint 
 autopep8 
 pipreqs 
-pipdeptree 
 pip-tools
+python-multipart
 requests
-pydantic
-bson
-opencv-python
-opencv-python-headless
 scikit-image
 scipy
-
-
+pandas
+stringcase
+numpy
 
