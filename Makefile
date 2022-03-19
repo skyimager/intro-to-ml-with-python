@@ -4,7 +4,7 @@ LATEST_GIT_COMMIT := $(shell git log -1 --format=%h)
 
 CONDA_BIN = $(shell which conda)
 CONDA_ROOT = $(shell $(CONDA_BIN) info --base)
-CONDA_ENV_NAME ?= "mlp"
+CONDA_ENV_NAME ?= "edvancer"
 CONDA_ENV_PREFIX = $(shell conda env list | grep $(CONDA_ENV_NAME) | sort | awk '{$$1=""; print $$0}' | tr -d '*\| ')
 CONDA_ACTIVATE := source $(CONDA_ROOT)/etc/profile.d/conda.sh ; conda activate $(CONDA_ENV_NAME) && PATH=${CONDA_ENV_PREFIX}/bin:${PATH};	
 
@@ -49,4 +49,4 @@ lint_autofix:
 	@echo "Few linting issues fixed"
 
 jupyter:
-	$(CONDA_ACTIVATE) nohup jupyter notebook --ip 0.0.0.0 --no-browser --allow-root &
+	$(CONDA_ACTIVATE) jupyter notebook --no-browser --allow-root

@@ -75,5 +75,8 @@ RUN sudo locale-gen en_US.UTF-8 \
     && sudo dpkg-reconfigure locales \
     && sudo localedef -i en_US -f UTF-8 en_US.UTF-8
 
+# TensorBoard & Jupyter Notebook
+EXPOSE 6006 8888
+
 # Switch back to dialog for any ad-hoc use of apt-get
 ENV DEBIAN_FRONTEND=dialog
