@@ -2,6 +2,8 @@
 old/**
 others/**
 supplementary/**
+misc_images/*
+**/reference_copy/**
 
 # Byte-compiled / optimized / DLL files
 .DS_Store
