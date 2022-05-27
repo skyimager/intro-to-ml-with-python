@@ -1,5 +1,5 @@
 from flask import Flask, jsonify,request
-from sklearn.externals import joblib
+import joblib
 import pandas as pd
 
 app = Flask(__name__)
